@@ -1,0 +1,20 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+a:hover {
+  text-decoration: underline;
+}
+section {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
