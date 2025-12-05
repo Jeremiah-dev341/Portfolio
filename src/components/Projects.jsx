@@ -37,7 +37,7 @@ const Projects = () => {
 
         <div className="bg-black/50 rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 border border-white/10">
           <motion.img
-            src="images/thumbnail.png"
+            src="/thumbnail.png"
             alt="Dev project thumbnail"
             className="w-full md:w-56 rounded-lg object-cover"
             whileHover={{ scale: 1.05 }}
@@ -82,10 +82,10 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            "images/geopex.png",
-            "images/poster.png",
-            "images/lupa.png",
-            "images/rollup.png",
+            "/geopex.png",
+            "/poster.png",
+            "/lupa.png",
+            "/rollup.png",
           ].map((img, i) => (
             <motion.div
               key={i}

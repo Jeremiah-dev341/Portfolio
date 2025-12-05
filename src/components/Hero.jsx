@@ -63,7 +63,7 @@ const Hero = () => {
 
         {/* Floating Image */}
         <motion.img
-          src="images/photo.png"
+          src="/photo.png"
           alt="Jeremiah"
           className="w-90 h-full rounded-lg shadow-xl brightness-75 relative z-10"
           animate={{ y: [0, -10, 0] }}

@@ -16,7 +16,7 @@ const Header = () => {
         {/* LOGO */}
         <Link to="/">
           <img
-            src="images/Logo.png"
+            src="/Logo.png"
             alt="Logo"
             className="h-8 hover:scale-110 transition duration-300"
           />
