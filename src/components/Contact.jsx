@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const socialLinks = [
   { id: 1, name: "GitHub", icon: <FaGithub />, url: "https://github.com/Jeremiah-dev341" },
@@ -19,9 +20,20 @@ const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+
+    emailjs.send(
+      "service_u0xs3yb",
+      "template_m85hvvl",
+      formData,
+      "49PhXsLy0-yi8SdiF"
+    )
+    .then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      setSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
+    }, (err) => {
+      console.log("FAILED...", err);
+    });
   };
 
   return (
@@ -40,7 +52,7 @@ const Contacts = () => {
 
         {/* LEFT SIDE */}
         <div>
-          <h2 className="text-4xl font-bold text-lime-400 mb-3">CONNECT.NODE</h2>
+          <h2 className="text-4xl font-bold text-lime-400 mb-3">CONNECT WITH ME</h2>
           <p className="font-mono text-sm opacity-70 mb-6">
             > Establishing secure communication channel...
           </p>
@@ -48,8 +60,10 @@ const Contacts = () => {
           {/* SOCIAL ORBS */}
           <div className="flex gap-4 mb-10">
             {socialLinks.map(link => (
-              <a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer"
-                className="group relative w-14 h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-lime-400 transition"
+              <a 
+                key={link.id} 
+                href={link.url} 
+                className="group relative w-14 h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-lime-400 transition ml-10"
               >
                 <span className="absolute inset-0 rounded-full bg-lime-400 blur-lg opacity-0 group-hover:opacity-40 transition"></span>
                 <span className="text-2xl relative z-10 group-hover:text-lime-400 transition">{link.icon}</span>
@@ -67,7 +81,7 @@ const Contacts = () => {
         <form onSubmit={handleSubmit} className="space-y-5">
           {submitted && (
             <p className="text-lime-400 font-mono text-sm">
-              > Transmission received. I will get back to you shortly!
+              > Message sent. I will get back to you shortly!
             </p>
           )}
 

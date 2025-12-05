@@ -24,7 +24,7 @@ const About = () => {
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ repeat: Infinity, duration: 3 }}
         >
-          ABOUT.exe
+          ABOUT ME
         </motion.h2>
 
         {/* Terminal Line */}
@@ -42,7 +42,7 @@ const About = () => {
           className="text-lg leading-relaxed opacity-90 mb-5"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.2 }}
         >
           I am <span className="text-lime-400 font-semibold">Jeremiah</span>, a passionate Full Stack Developer and Graphics Designer with a knack for creating visually appealing and user-friendly digital experiences. With expertise in both front-end and back-end technologies, I bring ideas to life through code and design. My goal is to build innovative solutions that not only meet client needs but also exceed their expectations.
         </motion.p>
@@ -51,7 +51,7 @@ const About = () => {
           className="text-lg leading-relaxed opacity-80 mb-5"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.6 }}
         >
           On the design side, I focus on creating visuals that feel modern and intentional, whether it’s branding, UI layouts, or digital content. I’m also a researcher at heart, always learning new tools, improving workflows, and staying curious about how technology keeps evolving.
         </motion.p>
@@ -60,7 +60,7 @@ const About = () => {
           className="text-lg leading-relaxed opacity-80"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.8 }}
         >
           When I'm not coding or designing, I enjoy exploring new technologies, contributing to open-source projects, and collaborating with fellow developers and designers. Let's connect and create something amazing together!
         </motion.p>

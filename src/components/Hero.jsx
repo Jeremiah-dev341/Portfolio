@@ -16,28 +16,26 @@ const Hero = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
 
-        {/* Floating Title */}
         <motion.h1
-          className="text-30 mb-5 font-bold tracking-wide"
+          className="text-2xl md:text-3xl lg:text-4xl mb-5 font-bold tracking-wide"
           animate={{ y: [0, -5, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         >
           Hello, my name is Jeremiah
         </motion.h1>
 
-        {/* Neon Subtitle */}
         <motion.p
-          className="text-25 opacity-80 mb-10 text-lime-400"
+          className="text-sm md:text-2xl lg:text-3xl opacity-80 mb-10 text-lime-400"
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ repeat: Infinity, duration: 3 }}
         >
-          Full Stack Developer <br /> + Graphics Designer
+          Full Stack Developer + Graphics Designer
         </motion.p>
 
-        {/* Futuristic Button */}
+        {/* Button */}
         <motion.a
           href="#projects"
-          className="relative inline-flex items-center justify-center rounded-50 px-10 py-3 bg-lime-500 text-black overflow-hidden"
+          className="relative inline-flex items-center justify-center rounded-50 px-10 py-3 bg-lime-500 text-black overflow-hidden rounded-full ml-50 hover:bg-lime-500"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -54,9 +52,8 @@ const Hero = () => {
         transition={{ duration: 1 }}
       >
 
-        {/* Glow Aura */}
         <motion.div
-          className="absolute w-96 h-96 rounded-full bg-lime-400/20 blur-3xl"
+          className="absolute w-full h-auto rounded-full bg-lime-400/20 blur-3xl"
           animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ repeat: Infinity, duration: 5 }}
         />

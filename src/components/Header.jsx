@@ -18,7 +18,7 @@ const Header = () => {
           <img
             src="/Logo.png"
             alt="Logo"
-            className="h-8 hover:scale-110 transition duration-300"
+            className="w-full h-8 hover:scale-110 transition duration-300"
           />
         </Link>
 
