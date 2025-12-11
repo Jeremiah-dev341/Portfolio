@@ -1,9 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   return (
-    <section className="h-120 bg-black text-white flex relative overflow-hidden">
+    <section id="Home" className="h-120 bg-black text-white flex relative overflow-hidden pt-16">
+
+      {/* Fixed Header */}
+      <motion.header
+        initial={{ y: -60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10"
+      >
+        <div className="max-w-6xl mx-auto flex justify-between items-center p-4 h-16">
+          {/* Logo */}
+          <img
+            src="/Logo.png"
+            alt="Logo"
+            className="h-30 w-auto hover:scale-110 transition duration-300"
+          />
+
+          {/* Navigation */}
+          <nav>
+            <ul className="flex space-x-6 font-mono text-sm text-white">
+              <NavItem to="#Home">HOME</NavItem>
+              <NavItem to="#About">ABOUT</NavItem>
+              <NavItem to="#Services">SERVICES</NavItem>
+              <NavItem to="#Projects">PROJECTS</NavItem>
+              <NavItem to="#Contact">CONTACT</NavItem>
+            </ul>
+          </nav>
+        </div>
+      </motion.header>
 
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-lime-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse blur-3xl"></div>
@@ -15,7 +44,6 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-
         <motion.h1
           className="text-2xl md:text-3xl lg:text-4xl mb-5 font-bold tracking-wide"
           animate={{ y: [0, -5, 0] }}
@@ -34,8 +62,8 @@ const Hero = () => {
 
         {/* Button */}
         <motion.a
-          href="#projects"
-          className="relative inline-flex items-center justify-center rounded-50 px-10 py-3 bg-lime-500 text-black overflow-hidden rounded-full ml-50 hover:bg-lime-500"
+          href="#Projects"
+          className="relative inline-flex items-center justify-center px-10 py-3 bg-lime-500 text-black rounded-full overflow-hidden hover:bg-lime-500"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -51,14 +79,12 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-
         <motion.div
           className="absolute w-full h-auto rounded-full bg-lime-400/20 blur-3xl"
           animate={{ scale: [1, 1.1, 1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ repeat: Infinity, duration: 5 }}
         />
 
-        {/* Floating Image */}
         <motion.img
           src="/photo.png"
           alt="Jeremiah"
@@ -69,6 +95,18 @@ const Hero = () => {
         />
       </motion.div>
     </section>
+  );
+};
+
+// NavItem
+const NavItem = ({ to, children }) => {
+  return (
+    <li className="relative group">
+      <HashLink smooth to={to} className="hover:text-lime-400 transition">
+        {children}
+      </HashLink>
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 group-hover:w-full bg-lime-400 transition-all duration-300"></span>
+    </li>
   );
 };
 

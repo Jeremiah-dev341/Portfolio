@@ -18,15 +18,16 @@ const Header = () => {
           <img
             src="/Logo.png"
             alt="Logo"
-            className="w-full h-8 hover:scale-110 transition duration-300"
+            className="w-full h-10 hover:scale-110 transition duration-300"
           />
         </Link>
 
         {/* NAVIGATION */}
         <nav>
           <ul className="flex space-x-6 font-mono text-sm text-white">
-            <NavItem to="/">Home</NavItem>
+            <NavItem to="/#Home" hash>Home</NavItem>
             <NavItem to="/#About" hash>About</NavItem>
+            <NavItem to="/#Services" hash>Services</NavItem>
             <NavItem to="/#Projects" hash>Projects</NavItem>
             <NavItem to="/#Contact" hash>Contact</NavItem>
           </ul>

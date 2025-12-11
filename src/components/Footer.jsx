@@ -5,8 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 const socialLinks = [
   { id: 1, name: "GitHub", icon: <FaGithub />, url: "https://github.com/Jeremiah-dev341" },
   { id: 2, name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/jeremiah-kaberere-a0647b38a/" },
-  { id: 3, name: "Email", icon: <FaEnvelope />, url: "mailto:jeremiakinuthia341@gmail.com" },
-  { id: 4, name: "Phone", icon: <FaPhone />, url: "tel:+254797933466" },
+  { id: 4, name: "Phone", icon: <FaPhone />, url: "tel:+254799472453" },
 ];
 
 const Footer = () => {

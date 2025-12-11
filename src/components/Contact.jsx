@@ -6,8 +6,7 @@ import emailjs from "@emailjs/browser";
 const socialLinks = [
   { id: 1, name: "GitHub", icon: <FaGithub />, url: "https://github.com/Jeremiah-dev341" },
   { id: 2, name: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/jeremiah-kaberere-a0647b38a/" },
-  { id: 3, name: "Email", icon: <FaEnvelope />, url: "mailto:jeremiakinuthia341@gmail.com" },
-  { id: 4, name: "Phone", icon: <FaPhone />, url: "tel:+254797933466" },
+  { id: 4, name: "Phone", icon: <FaPhone />, url: "tel:+254799472453" },
 ];
 
 const Contacts = () => {
@@ -37,7 +36,7 @@ const Contacts = () => {
   };
 
   return (
-    <section id="Contact" className="min-h-screen bg-black text-white relative overflow-hidden flex items-center justify-center p-10">
+    <section id="Contact" className="min-h-screen bg-black text-white relative overflow-hidden flex items-center justify-center p-10 ">
 
       {/* Animated Gradient Glow */}
       <div className="absolute inset-0 bg-gradient-to-tr from-lime-500/10 via-cyan-500/10 to-purple-500/10 blur-3xl animate-pulse"></div>
@@ -63,7 +62,7 @@ const Contacts = () => {
               <a 
                 key={link.id} 
                 href={link.url} 
-                className="group relative w-14 h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-lime-400 transition ml-10"
+                className="group relative w-14 h-14 flex items-center justify-center rounded-full border border-white/20 hover:border-lime-400 transition ml-20"
               >
                 <span className="absolute inset-0 rounded-full bg-lime-400 blur-lg opacity-0 group-hover:opacity-40 transition"></span>
                 <span className="text-2xl relative z-10 group-hover:text-lime-400 transition">{link.icon}</span>
@@ -73,7 +72,7 @@ const Contacts = () => {
 
           <p className="opacity-70">
             Want to collaborate, hire, or just vibe?  
-            Drop your message into the signal stream and let’s talk.
+            Drop your message and let’s talk.
           </p>
         </div>
 
